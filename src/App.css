@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-top: 10%;
 }
 
 .App-logo {
@@ -18,6 +19,11 @@
   color: white;
 }
 
+header {
+  height: 50px; 
+  background-color: red;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -29,4 +35,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.bienvenue {
+  font-size: 3em;
+}
+
+.jouer {
+  margin-top: 5%;
+  width: 90px;
+  height: 50px;
+  font-size: 1.2em;
+}
+
+body {
+  background-color: #eeeeee;
 }
