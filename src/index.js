@@ -12,7 +12,7 @@ import { Provider } from "react-redux";
 import { createStore, combineReducers } from 'redux';
 import { reducer } from './reducer';
 import { reducer as formReducer } from 'redux-form';
-import { Router, Switch, Route } from 'react-router';
+import { Switch, Route } from 'react-router';
 import { HashRouter } from 'react-router-dom';
 
 const rootReducer = combineReducers({

@@ -4,23 +4,24 @@ import './Resultat.css';
 
 class Resultat extends Component {
 
-    render() {
+    nextPath(path) {
+      this.props.history.push(path);
+    }
 
-      let nbLettres = [];
-      for (var i = 0; i < localStorage.nbLettres; i++) {
-        nbLettres.push(<label>_ </label>);
-      }
+    render() {
 
       if(localStorage.partieGagnee == 1) {
         return (
           <div className="resultat">
             <p>Félicitations, vous avez gagné 🏆</p>
+            <button className="jouer" onClick={ () => this.nextPath('/') }> Rejouer</button>
           </div>
         );
       } else {
         return (
           <div className="resultat">
             <p>Vous avez perdu...</p>
+            <button className="jouer" onClick={ () => this.nextPath('/') }> Rejouer</button>
           </div>
         )
       }
