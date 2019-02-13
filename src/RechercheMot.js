@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import './RechercheMot.css';
+import { Field, reduxForm } from 'redux-form';
 
 class RechercheMot extends Component {
 
@@ -78,4 +79,6 @@ class RechercheMot extends Component {
 
 export const Connect = connect(mapStateFromProps) (RechercheMot);*/
 
-export default withRouter(RechercheMot);
+export default withRouter(reduxForm({
+  form: 'SaisieLettresForm'
+})(RechercheMot));

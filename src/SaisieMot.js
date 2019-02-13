@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import './SaisieMot.css';
+import { reduxForm } from 'redux-form';
+
 
 class SaisieMot extends Component {
 
@@ -72,4 +74,6 @@ class SaisieMot extends Component {
   }
 }
 
-export default withRouter(SaisieMot);
+export default withRouter(reduxForm({
+  form: 'SaisieMotetNbChancesForm'
+})(SaisieMot));
